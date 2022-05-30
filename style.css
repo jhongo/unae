@@ -1,0 +1,54 @@
+.container{
+
+position: absolute;
+width: 99%;
+height: 99%;
+background: white;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(4, 1fr); 
+grid-template: "unae sgd sgd sgd" 100%;
+
+
+}
+
+
+.unae{
+grid-area: unae;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+text-align: center;
+border-right: 2px solid #264653;
+}
+
+
+.sgd{
+ grid-area: sgd;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ /* border:1px solid blue; */
+ background-image: url('./assets/background-unae.jpg') ;
+ background-size: cover;
+}
+
+
+@media screen and (max-width:768px) {
+    .container{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr); 
+        grid-template: "unae" 30%
+                       "sgd" 100%;
+     }                  
+    
+     .unae{
+        
+        border-bottom: 2px solid #264653;
+        }
+        
+}
+        
+    
+
+
